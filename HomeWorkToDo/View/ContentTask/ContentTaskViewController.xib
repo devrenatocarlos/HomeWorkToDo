@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentTaskViewController" customModule="HomeWorkToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="lbTaskTitle" destination="pH5-ta-TkM" id="0Mb-Qf-6zU"/>
+                <outlet property="tvTaskContent" destination="0SJ-LI-sfZ" id="0is-UV-bd4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descricao da Tarefa" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0SJ-LI-sfZ">
+                    <rect key="frame" x="16" y="271" width="382" height="364"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título da Tarefa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH5-ta-TkM">
+                    <rect key="frame" x="16" y="219.5" width="382" height="21.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-bO-vGY">
+                    <rect key="frame" x="176" y="670" width="62" height="30"/>
+                    <state key="normal" title="Salvar">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btSaveTaskContent:" destination="-1" eventType="touchUpInside" id="wD8-E7-s1s"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.62633874379999999" green="0.66666668650000005" blue="0.6389567706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Uj5-bO-vGY" firstAttribute="top" secondItem="0SJ-LI-sfZ" secondAttribute="bottom" constant="35" id="0Qg-pW-s2I"/>
+                <constraint firstItem="0SJ-LI-sfZ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="5YN-r5-9C6"/>
+                <constraint firstItem="0SJ-LI-sfZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="227" id="68w-Ye-7pG"/>
+                <constraint firstItem="Uj5-bO-vGY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.111111" constant="16" id="6TA-Cg-Iiq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0SJ-LI-sfZ" secondAttribute="trailing" constant="16" id="If5-7U-N1i"/>
+                <constraint firstItem="pH5-ta-TkM" firstAttribute="width" secondItem="0SJ-LI-sfZ" secondAttribute="width" id="Ubb-HP-38F"/>
+                <constraint firstItem="0SJ-LI-sfZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="WQg-zs-9Zt"/>
+                <constraint firstItem="0SJ-LI-sfZ" firstAttribute="centerX" secondItem="pH5-ta-TkM" secondAttribute="centerX" id="ZFt-WR-3ay"/>
+                <constraint firstItem="Uj5-bO-vGY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kgr-T0-Otj"/>
+                <constraint firstItem="0SJ-LI-sfZ" firstAttribute="top" secondItem="pH5-ta-TkM" secondAttribute="bottom" constant="30" id="mM7-D1-xzc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="122.54464285714285"/>
+        </view>
+    </objects>
+</document>
